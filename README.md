@@ -28,7 +28,7 @@ cd buddy-nesso-voice-demo
 - Or **type a message** instead of speaking (handy for testing).
 - `q` to quit.
 
-Setup downloads the buddy model (~0.8 GB) and converts it to MLX in `models/buddy-nesso-mlx/` (used automatically). The first run downloads Whisper large-v3-turbo (~1.6 GB). macOS will ask for **microphone permission** for your terminal app — allow it.
+The first run downloads the buddy model in MLX format ([giux78/buddy-nesso-sft-v1-mlx](https://huggingface.co/giux78/buddy-nesso-sft-v1-mlx), ~0.8 GB) and Whisper large-v3-turbo (~1.6 GB) from Hugging Face. macOS will ask for **microphone permission** for your terminal app — allow it.
 
 Language is auto-detected from the child's speech: Italian replies are spoken with the **Alice** voice, English with **Samantha**.
 

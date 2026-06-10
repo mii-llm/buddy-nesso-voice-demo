@@ -25,10 +25,10 @@ import sounddevice as sd
 
 SAMPLE_RATE = 16000  # whisper expects 16 kHz mono
 
-# Local MLX conversion created by setup.sh; falls back to the HF repo
-# (mlx-lm converts transformers checkpoints on the fly).
+# Prefer a local MLX conversion if present, otherwise pull the published
+# MLX repo from Hugging Face (no conversion needed).
 LOCAL_MLX = Path(__file__).parent / "models" / "buddy-nesso-mlx"
-DEFAULT_MODEL = str(LOCAL_MLX) if LOCAL_MLX.exists() else "giux78/buddy-nesso-sft-v1"
+DEFAULT_MODEL = str(LOCAL_MLX) if LOCAL_MLX.exists() else "giux78/buddy-nesso-sft-v1-mlx"
 
 SYSTEM_PROMPT = """You are Nesso, a gentle story and play buddy for children under 8.
 Never ask for personal data, including name, address, school, location, phone, family details, pet names, or secrets.
